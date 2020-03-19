@@ -2,6 +2,7 @@ package ru.stqa.pft.addressbook.appmanager;
 
 import model.GroupData;
 import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 
 /**
@@ -9,7 +10,8 @@ import org.openqa.selenium.firefox.FirefoxDriver;
  */
 public class GroupHelper extends HelperBase {
 
-  public GroupHelper(FirefoxDriver wd) {
+  protected WebDriver wd;
+  public GroupHelper(WebDriver wd) {
     super(wd);
    }
 

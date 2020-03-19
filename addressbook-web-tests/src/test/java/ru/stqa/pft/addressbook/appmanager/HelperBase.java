@@ -2,15 +2,16 @@ package ru.stqa.pft.addressbook.appmanager;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.NoAlertPresentException;
+import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 
 /**
  * Created by Роман on 18.03.2020.
  */
 public class HelperBase {
-  FirefoxDriver wd;
+  WebDriver wd;
 
-  public HelperBase(FirefoxDriver wd) {
+  public HelperBase(WebDriver wd) {
     this.wd=wd;
   }
 
@@ -33,9 +34,7 @@ public class HelperBase {
     }
   }
 
-  public void confirmDelete(){
-    wd.switchTo().alert().accept();
-  }
+
 
 
 }
