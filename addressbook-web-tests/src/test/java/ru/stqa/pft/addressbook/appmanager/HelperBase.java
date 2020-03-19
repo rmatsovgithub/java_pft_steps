@@ -33,5 +33,9 @@ public class HelperBase {
     }
   }
 
+  public void confirmDelete(){
+    wd.switchTo().alert().accept();
+  }
+
 
 }
