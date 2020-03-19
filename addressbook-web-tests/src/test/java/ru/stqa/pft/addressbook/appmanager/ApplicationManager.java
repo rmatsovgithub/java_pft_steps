@@ -5,6 +5,7 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.remote.BrowserType;
 
+import java.util.Objects;
 import java.util.concurrent.TimeUnit;
 
 /**
@@ -26,7 +27,7 @@ public class  ApplicationManager {
 
 
   public void init() {
-    if(browser == BrowserType.FIREFOX) {
+    if(Objects.equals(browser, BrowserType.FIREFOX)) {
       wd = new FirefoxDriver();
     } else wd = new ChromeDriver();
     wd.manage().timeouts().implicitlyWait(60, TimeUnit.SECONDS);
