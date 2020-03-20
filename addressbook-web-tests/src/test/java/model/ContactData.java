@@ -10,8 +10,9 @@ public class ContactData {
   private String email;
 
 
-
   private String group;
+
+
 
   public ContactData(String firstName, String lastName, String phone, String email, String group) {
     this.firstName = firstName;
@@ -40,4 +41,5 @@ public class ContactData {
   public String getGroup() {
     return group;
   }
+
 }

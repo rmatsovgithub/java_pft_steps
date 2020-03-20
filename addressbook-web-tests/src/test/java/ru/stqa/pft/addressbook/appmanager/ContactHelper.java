@@ -17,25 +17,18 @@ public class ContactHelper extends HelperBase {
     super(wd);
   }
 
-  public void fillContactForm(ContactData contactData, boolean creation) {
+  public void fillContactForm(ContactData contactData, boolean creation){
     type(By.name("firstname"), contactData.getFirstName());
     type(By.name("lastname"), contactData.getLastName());
     type(By.name("mobile"), contactData.getPhone());
     type(By.name("email"), contactData.getEmail());
-    if (creation) {
+    if(creation){
       new Select(wd.findElement(By.name("new_group"))).selectByVisibleText(contactData.getGroup());
     } else {
       Assert.assertFalse(isElementPresent(By.name("new_group")));
     }
-  }
 
-  private boolean isElementPresent(By locator) {
-   try {
-     wd.findElement(locator);
-     return true;
-   } catch (NoSuchElementException ex){
-     return false;
-   }
+
   }
 
   public void submitContactCreation() {
@@ -55,7 +48,7 @@ public class ContactHelper extends HelperBase {
     wd.switchTo().alert().accept();
   }
 
-  public void initContactModification() {
+  public void initContactModification(){
     click(By.xpath("//table[@id='maintable']/tbody/tr[2]/td[8]/a/img"));
 
   }
