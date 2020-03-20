@@ -21,7 +21,7 @@ public class NavigationHelper extends HelperBase {
             && isElementPresent(By.tagName("new")))  {
       return;
     }
-    
+
 
 
     click(By.linkText("groups"));
